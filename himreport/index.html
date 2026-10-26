@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>힘보고 — 더힘이앤씨 사내 업무보고 연결기</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: "맑은 고딕", "Malgun Gothic", system-ui, sans-serif;
+    line-height: 1.75; max-width: 760px; margin: 0 auto; padding: 40px 20px 80px;
+    color: #222; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e8e8e8; background: #16171a; } }
+  h1 { font-size: 1.6rem; margin-bottom: .2rem; }
+  .sub { color: #666; margin-top: 0; }
+  @media (prefers-color-scheme: dark) { .sub { color: #aaa; } }
+  h2 { font-size: 1.1rem; margin-top: 2.2rem; border-bottom: 1px solid #ddd; padding-bottom: .3rem; }
+  @media (prefers-color-scheme: dark) { h2 { border-color: #333; } }
+  ul { padding-left: 1.2rem; }
+  li { margin: .35rem 0; }
+  .box { background: #f6f7f9; border-radius: 8px; padding: 16px 20px; margin: 1.2rem 0; }
+  @media (prefers-color-scheme: dark) { .box { background: #202228; } }
+  footer { margin-top: 3rem; color: #777; font-size: .9rem; }
+  a { color: #1a6cd4; }
+  @media (prefers-color-scheme: dark) { a { color: #6cb0ff; } }
+</style>
+</head>
+<body>
+
+<h1>힘보고</h1>
+<p class="sub">더힘이앤씨 사내 업무보고 연결기 (클로드 커넥터)</p>
+
+<div class="box">
+  직원이 쓰는 클로드(claude.ai)와 회사 업무보고 시스템을 이어 주는 연결선입니다.
+  직원은 클로드에 말로 <b>일일 업무보고를 보내고, 아침 브리핑을 읽고, 본인 메일함을 찾아보거나 메일을 보낼</b> 수 있습니다.
+</div>
+
+<h2>무엇을 하는 프로그램인가</h2>
+<ul>
+  <li>직원이 클로드에 "보고할 거야"라고 말하면, 클로드가 정리한 보고를 회사 업무보고 서버로 보냅니다.</li>
+  <li>"오늘 브리핑 보여줘"라고 하면 그 직원 등급에 맞는 아침 브리핑을 가져옵니다.</li>
+  <li>직원이 요청할 때만 본인 지메일에서 메일을 찾아 읽고, 직원이 승인한 메일만 본인 이름으로 보냅니다.</li>
+  <li>회사 통화녹음 정리 메일([음성기록])을 읽어 통화 내용을 요약하는 데 씁니다.</li>
+  <li>첨부가 필요하면 본인 구글 드라이브에서 파일을 찾아 붙입니다.</li>
+</ul>
+
+<h2>누가 쓰나</h2>
+<ul>
+  <li>더힘이앤씨 임직원만 씁니다. 회사 직원 목록에 있는 지메일만 연결됩니다.</li>
+  <li>사내 전용 도구이며 일반에 배포하지 않습니다.</li>
+</ul>
+
+<h2>구글 계정에서 쓰는 권한</h2>
+<ul>
+  <li><code>gmail.readonly</code> — 직원이 요청한 메일을 찾아 읽습니다. 서버가 메일을 저장하지 않습니다.</li>
+  <li><code>gmail.send</code> — 직원이 승인한 보고·메일을 본인 이름으로 보냅니다.</li>
+  <li><code>drive.file</code> — 이 프로그램이 만든 첨부 파일만 다룹니다.</li>
+  <li><code>drive.readonly</code> — 직원이 "이 파일 붙여 줘"라고 할 때 본인 드라이브에서 그 파일을 찾습니다.</li>
+</ul>
+<p>동의하지 않아도 업무보고 발송과 브리핑 읽기는 됩니다(회사 계정이 대신 발송). 메일 읽기·보내기·드라이브 첨부만 동의가 필요합니다.</p>
+
+<h2>자세한 내용</h2>
+<p>무엇을 다루고 어디에 두는지는 <a href="privacy.html">개인정보처리방침</a>에 적어 두었습니다.</p>
+
+<footer>
+  운영: 더힘이앤씨 박제형 · 문의: internethulk0403@gmail.com<br>
+  2026-10-26 기준
+</footer>
+
+</body>
+</html>
